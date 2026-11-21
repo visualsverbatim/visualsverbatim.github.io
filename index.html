@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fine Art Photography Portfolio</title>
+<meta name="description" content="Fine art photography prints for hotels, restaurants and interiors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/13-crimson-1200.webp" imagesrcset="images/13-crimson-640.webp 640w,images/13-crimson-1200.webp 1200w,images/13-crimson-1493.webp 1493w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400&display=swap">
+<style>
+:root{--bg:#e8e7eb;--fg:#17181d;--muted:#5d5f6b;--sh:rgba(25,25,45,.55);--ov:rgba(10,10,18,.88);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f2128;--fg:#f2f1f5;--muted:#9c9fac;--sh:rgba(0,0,0,.8)}}
+:root[data-theme="dark"]{--bg:#1f2128;--fg:#f2f1f5;--muted:#9c9fac;--sh:rgba(0,0,0,.8)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;color:var(--fg);font:300 1rem/1.7 "Manrope",system-ui,sans-serif;overflow-x:clip}
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;color:#fff;background:#0b0c12}
+.hero img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:50% 38%;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,16,.35) 0%,rgba(8,8,16,0) 35%,rgba(8,8,16,.78) 100%)}
+.hero .t{position:absolute;z-index:2;left:clamp(1.25rem,6vw,6rem);right:1.25rem;bottom:clamp(2.5rem,10vh,6rem)}
+.hero small{display:block;font-size:.95rem;letter-spacing:.08em;opacity:.85;margin-bottom:1rem}
+.hero h1{margin:0;font:600 clamp(3.3rem,11vw,10rem)/1.02 "Cormorant Garamond",Georgia,serif;letter-spacing:-.015em;text-shadow:0 2px 40px rgba(0,0,0,.35)}
+.hero h1 span{display:block;overflow:hidden;padding:0 .1em .18em 0;margin-bottom:-.1em}
+.hero h1 span i{display:block;font-style:italic;animation:up 1.3s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span:nth-child(2) i{animation-delay:.18s}.hero h1 span:nth-child(3) i{animation-delay:.36s}
+@keyframes up{from{transform:translateY(105%)}to{transform:none}}
+.intro{max-width:30ch;margin:clamp(5rem,16vh,10rem) auto clamp(5rem,18vh,11rem);padding:0 1.5rem;font:300 clamp(1.7rem,3.6vw,2.8rem)/1.25 "Cormorant Garamond",Georgia,serif;text-align:center}
+.row{display:block}
+.pair{display:flex;gap:8%;padding:0 6%;align-items:flex-start}
+.pair .f{flex:1;margin-left:0;margin-right:0;width:auto}
+.pair .f:nth-child(2){margin-top:22vh}
+.f{position:relative;margin-bottom:clamp(100px,18vh,200px);opacity:0;transition:opacity 1.2s ease}
+.f.in{opacity:1}
+.a{width:64%;margin-left:auto;margin-right:auto}.b{width:54%;margin-left:auto;margin-right:auto}.c{width:90%;margin-left:auto;margin-right:auto}
+.g{width:78%;margin-left:auto;margin-right:auto}.h{width:38%;margin-left:auto;margin-right:auto}.n{width:26%;margin-left:auto;margin-right:auto}
+.open{display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;font:inherit;color:inherit}
+.open:focus-visible{outline:2px solid var(--fg);outline-offset:14px}
+.open img{display:block;width:100%;height:auto;border:0;box-shadow:0 30px 100px var(--sh)}
+figcaption{text-align:center;margin-top:2rem;font:italic 400 1.2rem/1.3 "Cormorant Garamond",Georgia,serif;color:var(--muted)}
+.end{max-width:34ch;margin:0 auto;padding:6vh 1.5rem clamp(5rem,16vh,9rem);text-align:center}
+.end h2{margin:0 0 1.25rem;font:300 clamp(2rem,4.5vw,3.4rem)/1.1 "Cormorant Garamond",Georgia,serif}
+.end p{margin:0;color:var(--muted)}
+#bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bgl{position:absolute;inset:-12%;width:124%;height:124%;object-fit:cover;filter:blur(18px) saturate(1.15);opacity:0;transition:opacity 1.4s ease;will-change:transform}
+.bgl.on{opacity:.45}
+.note{max-width:40ch;margin:0 auto;padding:4vh 1.5rem clamp(4rem,12vh,7rem);text-align:center;font:italic 400 clamp(1.25rem,2.2vw,1.55rem)/1.6 "Cormorant Garamond",Georgia,serif}
+#lb{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:var(--ov);padding:4vmin;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 30px 100px rgba(0,0,0,.7)}
+@media (max-width:700px){
+.a,.b,.c,.g{width:90%;margin-left:auto;margin-right:auto}.h{width:70%}.n{width:58%;margin-left:auto;margin-right:auto}
+.pair{display:block;padding:0}.pair .f{width:80%;margin:0 auto clamp(100px,18vh,200px)}.pair .f:nth-child(2){margin-top:0}
+.pair .f:nth-child(even),.pair .f:nth-child(odd){margin-left:auto;margin-right:auto}
+}
+.foot{background:#14151b;color:#f2f1f5;padding-top:clamp(4rem,12vh,8rem)}
+.foot .note{padding-bottom:2rem}
+.sig{display:block;width:clamp(130px,18vw,210px);height:auto;margin:0 auto clamp(2.5rem,7vh,4.5rem)}
+.foot .end p{color:#a9acb9}
+.mail{display:inline-block;margin-top:1.75rem;color:#f2f1f5;font:300 1rem/1.7 "Manrope",system-ui,sans-serif;text-decoration:underline;text-underline-offset:.3em}
+.mail:focus-visible{outline:2px solid #f2f1f5;outline-offset:6px}
+@media (prefers-reduced-motion:reduce){.hero h1 span i{animation:none}.f{opacity:1;transition:none}}
+</style>
+</head>
+<body>
+<div id="bg" aria-hidden="true"><img class="bgl" alt=""><img class="bgl" alt=""></div>
+<header class="hero">
+<img id="heroimg" src="images/13-crimson-1200.webp" srcset="images/13-crimson-640.webp 640w,images/13-crimson-1200.webp 1200w,images/13-crimson-1493.webp 1493w" sizes="100vw" width="1493" height="2464" alt="A crimson rose on a teal background" fetchpriority="high" decoding="async">
+<div class="t"><small>Fine art photography</small>
+<h1><span><i>Light, colour,</i></span><span><i>and the details</i></span><span><i>in between.</i></span></h1></div>
+</header>
+<p class="intro">Photographs of waterfront nights, small wild things, and the textures most people walk past.</p>
+<main id="g"></main>
+<footer class="foot"><p class="note">Thank you for your consideration and time in viewing these photos. Please keep in mind that the future goal is to have photos from 10 different hot spots around British Columbia for the first phase of the series. These photos are an example of the style, composition, colour and vibrance to expect from future photos.</p>
+<img class="sig" src="images/signature.png" width="600" height="217" alt="Signature" loading="lazy">
+<section class="end">
+<h2>Prints and placements</h2>
+<p>Every image is available as a signed print, and the work is ready to hang in hotels, restaurants and interiors. Get in touch to arrange a consult.</p>
+<a class="mail" href="mailto:visualsverbatim@gmail.com">visualsverbatim@gmail.com</a>
+</section></footer>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Full size photo"><img alt=""></div>
+<script>
+const IM={"1":{"f":"01-spectrum-dust","w":2400,"h":1052,"s":[640,1200,1800,2400]},"3":{"f":"03-red-ground","w":1568,"h":2361,"s":[640,1200,1568]},"4":{"f":"04-burrard-inlet-blue-hour","w":2400,"h":507,"s":[640,1200,1800,2400]},"5":{"f":"05-dragonfly","w":2400,"h":1530,"s":[640,1200,1800,2400]},"6":{"f":"06-watchful","w":2333,"h":1568,"s":[640,1200,1800,2333]},"7":{"f":"07-where-the-sea-breaks","w":2400,"h":325,"s":[640,1200,1800,2400]},"8":{"f":"08-celebration-of-light","w":2400,"h":1260,"s":[640,1200,1800,2400]},"9":{"f":"09-watchers","w":2400,"h":1342,"s":[640,1200,1800,2400]},"10":{"f":"10-fire-in-the-stream","w":1728,"h":2156,"s":[640,1200,1728]},"11":{"f":"11-lions-gate","w":2324,"h":1570,"s":[640,1200,1800,2324]},"12":{"f":"12-through-the-branches","w":1295,"h":2576,"s":[640,1200,1295]},"13":{"f":"13-crimson","w":1493,"h":2464,"s":[640,1200,1493]},"14":{"f":"14-velocity","w":2400,"h":1504,"s":[640,1200,1800,2400]},"16":{"f":"16-canopy","w":1568,"h":2361,"s":[640,1200,1568]},"17":{"f":"17-devotion","w":2400,"h":1314,"s":[640,1200,1800,2400]},"18":{"f":"18-soft-focus-green","w":1473,"h":2520,"s":[640,1200,1473]},"19":{"f":"19-last-bloom","w":1419,"h":2576,"s":[640,1200,1419]},"20":{"f":"20-veil","w":1600,"h":909,"s":[640,1200,1600]},"22":{"f":"22-slow-water","w":2400,"h":421,"s":[640,1200,1800,2400]},"23":{"f":"23-ember","w":1493,"h":2464,"s":[640,1200,1493]},"24":{"f":"24-when-pigs-fly","w":601,"h":2576,"s":[601]}};
+const T=["Spectrum dust","Dusk bloom","Red ground","Burrard Inlet at blue hour","Dragonfly in the petunias","Watchful","Where the sea breaks","Celebration of Light","Watchers","Fire in the stream","Lions Gate","Through the branches","Crimson","Velocity","Dusk, one lit window","Canopy","Devotion","Soft focus, green","Last bloom","Veil","Ultraviolet","Slow water","Ember","When Pigs Fly"];
+const ROWS=[[[1,"a",.12]],[[3,"h",.2]],[[4,"c",.1]],[[14,"b",.14]],[[5,"a",.16]],[[16,"",.08],[18,"",.2]],[[6,"a",.08]],[[17,"b",.12]],[[7,"c",.12]],[[8,"g",.18]],[[19,"",.08],[23,"",.2]],[[20,"a",.14]],[[10,"",.08],[12,"",.2]],[[22,"c",.1]],[[9,"b",.14]],[[24,"n",.12]],[[11,"b",.1]],[[13,"h",.16]]];
+const SZ={a:"64vw",b:"54vw",c:"90vw",g:"78vw",h:"38vw",n:"26vw","":"42vw"},SZM={a:"90vw",b:"90vw",c:"90vw",g:"90vw",h:"70vw",n:"58vw","":"80vw"};
+const url=(i,w)=>"images/"+IM[i].f+"-"+w+".webp";
+const full=i=>url(i,IM[i].s[IM[i].s.length-1]);
+function pic(i,c){const m=IM[i],s=m.s;return '<img src="'+url(i,s[Math.min(1,s.length-1)])+'" srcset="'+s.map(w=>url(i,w)+" "+w+"w").join(",")+'" sizes="(max-width:700px) '+SZM[c]+","+SZ[c]+'" width="'+m.w+'" height="'+m.h+'" alt="'+T[i-1]+'" loading="lazy" decoding="async">'}
+const g=document.getElementById("g");
+ROWS.forEach(r=>{const d=document.createElement("div");d.className=r.length>1?"pair":"row";
+r.forEach(([i,c,s])=>{const f=document.createElement("figure");f.className="f "+c;
+f.dataset.s=s;f.dataset.k=i-1;f.innerHTML='<div class="plx"><button class="open" data-i="'+(i-1)+'" aria-label="View '+T[i-1]+' full size">'+pic(i,c)+'</button><figcaption>'+T[i-1]+'</figcaption></div>';
+d.appendChild(f)});g.appendChild(d)});
+const hero=document.getElementById("heroimg");
+const figs=[...document.querySelectorAll(".f")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+figs.forEach(f=>io.observe(f));
+const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let tick=false;
+const bl=[...document.querySelectorAll(".bgl")];let ci=0,ai=-1;
+function setBg(i){if(i===ai)return;ai=i;if(i<0){bl.forEach(b=>b.classList.remove("on"));return}const n=bl[1-ci];n.src="images/"+IM[i+1].f+"-bg.webp";n.classList.add("on");bl[ci].classList.remove("on");ci=1-ci}
+function update(){tick=false;const vh=innerHeight,y=scrollY;let best=-1,bd=1e9,bo=0;
+if(!still&&y<vh*1.2)hero.style.transform="translate3d(0,"+(y*.3)+"px,0)";
+figs.forEach(f=>{const r=f.getBoundingClientRect();const o=r.top+r.height/2-vh/2;if(Math.abs(o)<bd){bd=Math.abs(o);best=+f.dataset.k;bo=o}if(r.bottom<-400||r.top>vh+400||still)return;
+f.firstChild.style.transform="translate3d(0,"+(-(r.top+r.height/2-vh/2)*f.dataset.s)+"px,0)"});
+const on=y>vh*.7&&bd<vh*.55;setBg(on?best:-1);if(on&&!still){const sh=Math.max(-vh*.1,Math.min(vh*.1,bo*.12));bl.forEach(b=>b.style.transform="translate3d(0,"+sh+"px,0) scale(1.05)")}}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});addEventListener("resize",update);update();
+const lb=document.getElementById("lb"),li=lb.querySelector("img");let last=null;
+g.addEventListener("click",e=>{const b=e.target.closest(".open");if(!b)return;last=b;li.src=full(+b.dataset.i+1);li.alt=T[b.dataset.i];lb.classList.add("on")});
+function close(){lb.classList.remove("on");if(last)last.focus()}
+lb.addEventListener("click",close);addEventListener("keydown",e=>{if(e.key==="Escape"&&lb.classList.contains("on"))close()});
+</script>
+</body>
+</html>
